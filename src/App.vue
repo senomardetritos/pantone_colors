@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<HeaderSite />
+	<SubHeader />
+	<ListColors />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+	import { useStore } from 'vuex';
+	import HeaderSite from './components/HeaderSite.vue';
+	import SubHeader from './components/SubHeader.vue';
+	import ListColors from './components/ListColors.vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+	const store = useStore();
+	store.dispatch('loadColors');
+	store.dispatch('loadColors', 2);
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+	#app {
+		font-family: Avenir, Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-align: center;
+		color: #2c3e50;
+	}
+	@media screen and (min-width: 900px) {
+		#app {
+			margin: 0 100px;
+		}
+	}
 </style>
