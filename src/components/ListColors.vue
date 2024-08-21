@@ -11,7 +11,17 @@
 	import { useStore } from 'vuex';
 	import CardColor from './CardColor.vue';
 	const store = useStore();
-	const list_colors = computed(() => store.state.colorStore.colors);
+	const filter = computed(() => store.getters['filterStore/getSelected']);
+	const list_colors = computed(() => {
+		if (filter.value == 'TODAS') {
+			return store.state.colorStore.colors;
+		} else {
+			return store.state.colorStore.colors.filter((item) => {
+				if (item.count > 0) return true;
+				return false;
+			});
+		}
+	});
 </script>
 
 <style scoped>
