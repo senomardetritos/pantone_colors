@@ -11,7 +11,7 @@
 	import { useStore } from 'vuex';
 	import CardColor from './CardColor.vue';
 	const store = useStore();
-	const list_colors = computed(() => store.state.colors);
+	const list_colors = computed(() => store.state.colorStore.colors);
 </script>
 
 <style scoped>
@@ -21,6 +21,6 @@
 		align-items: center;
 		justify-content: center;
 		gap: 48px;
-        margin-top: 36px;
+		margin-top: 36px;
 	}
 </style>

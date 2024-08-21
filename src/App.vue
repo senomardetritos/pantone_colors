@@ -11,8 +11,8 @@
 	import ListColors from './components/ListColors.vue';
 
 	const store = useStore();
-	store.dispatch('loadColors');
-	store.dispatch('loadColors', 2);
+	store.dispatch('colorStore/loadColors');
+	store.dispatch('colorStore/loadColors', 2);
 </script>
 
 <style>

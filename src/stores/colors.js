@@ -1,7 +1,6 @@
-import { createStore } from 'vuex';
-
 // Cria uma nova instância do store.
-const store = createStore({
+export default {
+	namespaced: true,
 	state: {
 		colors: [],
 	},
@@ -40,6 +39,4 @@ const store = createStore({
 			commit('addColors', data);
 		},
 	},
-});
-
-export default store;
+};

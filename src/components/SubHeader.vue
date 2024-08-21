@@ -20,9 +20,9 @@
 	import { useStore } from 'vuex';
 
 	const store = useStore();
-	const totalCount = computed(() => store.getters.totalCount);
-	const totalColors = computed(() => store.getters.totalColors);
-	const colorsCount = computed(() => store.getters.colorsCount);
+	const totalCount = computed(() => store.getters['colorStore/totalCount']);
+	const totalColors = computed(() => store.getters['colorStore/totalColors']);
+	const colorsCount = computed(() => store.getters['colorStore/colorsCount']);
 </script>
 
 <style scoped>

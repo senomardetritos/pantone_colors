@@ -31,10 +31,10 @@
 	});
 
 	function increment() {
-		store.commit('increment', props.color.id);
+		store.commit('colorStore/increment', props.color.id);
 	}
     function decrement() {
-		store.commit('decrement', props.color.id);
+		store.commit('colorStore/decrement', props.color.id);
 	}
 </script>
 
