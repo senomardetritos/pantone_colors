@@ -2,6 +2,7 @@
 	<HeaderSite />
 	<SubHeader />
 	<ListColors />
+	<FooterSite />
 </template>
 
 <script setup>
@@ -9,6 +10,7 @@
 	import HeaderSite from './components/HeaderSite.vue';
 	import SubHeader from './components/SubHeader.vue';
 	import ListColors from './components/ListColors.vue';
+	import FooterSite from './components/FooterSite.vue';
 
 	const store = useStore();
 	store.dispatch('colorStore/loadColors');
